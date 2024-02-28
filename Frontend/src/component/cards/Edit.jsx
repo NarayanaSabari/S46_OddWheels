@@ -46,7 +46,7 @@ export const Edit = ({ close, data, edit }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/post/update",
+        `${import.meta.env.VITE_REACT_APP_HOST}/api/post/update`,
         postData,
         {
           withCredentials: true,

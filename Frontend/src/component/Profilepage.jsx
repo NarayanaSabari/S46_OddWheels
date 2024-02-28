@@ -3,6 +3,7 @@ import axios from "axios";
 import backgroundImage from "../Public/HomeBG.svg";
 import { Buffer } from "buffer";
 import { Post } from "./cards/Post";
+
 export const Profilepage = () => {
   const [data, setData] = useState({});
   const [posts, setPosts] = useState([]); // Initialize posts state with empty array
@@ -10,8 +11,10 @@ export const Profilepage = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/fetch/profile",
-          { withCredentials: true },
+          `${import.meta.env.VITE_REACT_APP_HOST}/api/fetch/profile`,
+          {
+            withCredentials: true,
+          },
         );
         setData(response.data);
       } catch (error) {
@@ -19,8 +22,10 @@ export const Profilepage = () => {
       }
       try {
         const post = await axios.get(
-          "http://localhost:3000/api/fetch/userpost",
-          { withCredentials: true },
+          `${import.meta.env.VITE_REACT_APP_HOST}/api/fetch/userpost`,
+          {
+            withCredentials: true,
+          },
         );
         setPosts(post.data);
       } catch (error) {

@@ -41,7 +41,7 @@ export const Signin = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/signin",
+        `${import.meta.env.VITE_REACT_APP_HOST}/api/auth/signin`,
         { email: credentials.email, password: credentials.password },
         { withCredentials: true }, // Enable sending cookies
       );

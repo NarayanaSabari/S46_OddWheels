@@ -19,7 +19,7 @@ export const Home = () => {
       try {
         console.log("fetching post data");
         const { data } = await axios.get(
-          "http://localhost:3000/api/fetch/post",
+          `${import.meta.env.VITE_REACT_APP_HOST}/api/fetch/post`,
           {
             withCredentials: true,
           },
@@ -45,7 +45,7 @@ export const Home = () => {
           return;
         }
         await axios.post(
-          "http://localhost:3000/api/auth/home",
+          `${import.meta.env.VITE_REACT_APP_HOST}/api/auth/home`,
           {},
           { withCredentials: true },
         );

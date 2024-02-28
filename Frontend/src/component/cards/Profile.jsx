@@ -9,7 +9,7 @@ export const Profile = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/fetch/profile",
+          `${import.meta.env.VITE_REACT_APP_HOST}/api/fetch/profile`,
           { withCredentials: true },
         );
         // console.log(response.data);

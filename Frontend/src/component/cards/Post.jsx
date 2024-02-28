@@ -12,7 +12,7 @@ export const Post = ({ data, edit }) => {
       try {
         console.log("fetching post user data");
         const response = await axios.post(
-          "http://localhost:3000/api/fetch/post/user",
+          `${import.meta.env.VITE_REACT_APP_HOST}/api/fetch/post/user`,
           { userId: data.userID },
           { withCredentials: true },
         );
@@ -36,7 +36,7 @@ export const Post = ({ data, edit }) => {
     console.log("Delete post clicked", postId);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/post/delete",
+        `${import.meta.env.VITE_REACT_APP_HOST}/api/post/delete`,
         { postId: postId },
         { withCredentials: true },
       );

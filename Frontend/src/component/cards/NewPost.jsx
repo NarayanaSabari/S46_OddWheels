@@ -58,7 +58,7 @@ export const NewPost = ({ close }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/post/post",
+        `${import.meta.env.VITE_REACT_APP_HOST}/api/post/post`,
         data,
         {
           headers: {

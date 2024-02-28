@@ -94,7 +94,7 @@ export const Signup = () => {
     try {
       // Check if email already exists
       const emailExists = await axios.post(
-        "http://localhost:3000/api/auth/checkemail",
+        `${import.meta.env.VITE_REACT_APP_HOST}/api/auth/checkemail`,
         { email: formData.email },
       );
       // console.log(emailExists);
@@ -104,7 +104,7 @@ export const Signup = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:3000/api/auth/signup",
+        `${import.meta.env.VITE_REACT_APP_HOST}/api/auth/signup`,
         data,
         {
           headers: {
