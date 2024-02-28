@@ -41,7 +41,7 @@ export const Home = () => {
     const verifyCookie = async () => {
       try {
         if (!cookies.token || cookies.token === "undefined") {
-          navigate("/login");
+          navigate("/");
           return;
         }
         await axios.post(
@@ -52,7 +52,7 @@ export const Home = () => {
       } catch (error) {
         console.error("Error verifying cookie:", error);
         Cookies.remove("token");
-        navigate("/login");
+        navigate("/");
       }
     };
     verifyCookie();
@@ -60,7 +60,7 @@ export const Home = () => {
 
   const logout = () => {
     Cookies.remove("token");
-    navigate("/login");
+    navigate("/");
   };
 
   const handleAddPostClick = () => {
