@@ -116,7 +116,7 @@ export const Signup = () => {
 
       if (response.data.signup) {
         console.log(response.data.message);
-        navigate("/login");
+        navigate("/");
       } else {
         const value = response.data.message[0];
         console.log(value.field);
