@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cookies from "js-cookie";
 
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -49,6 +50,7 @@ export const Signin = () => {
         setErrors({ ...errors, heading: response.data.message });
         return;
       } else {
+        Cookies.set("token", response.data.accessToken, { expires: 2 }); // Expires in 7 days
         navigate("/home");
       }
     } catch (error) {

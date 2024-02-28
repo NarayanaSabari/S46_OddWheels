@@ -78,10 +78,10 @@ Auth.post("/signin", async (req, res) => {
     const loginStatus = await validateLogin(req.body.password, req.body.email);
     // console.log(loginStatus);
     if (loginStatus.match) {
-      res.cookie("token", loginStatus.accessToken, {
-        withCredentials: true,
-        httpOnly: false,
-      });
+      // res.cookie("token", loginStatus.accessToken, {
+      //   withCredentials: true,
+      //   httpOnly: false,
+      // });
       res.status(200).json({
         validate: true, // Corrected spelling of validate
         message: "Welcome",
