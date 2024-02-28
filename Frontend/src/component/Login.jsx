@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import backgroundImage from "../../src/Public/loginBackGround.svg";
 
 export const Login = () => {
   // State variables for email and password
@@ -19,7 +18,7 @@ export const Login = () => {
     // Container with background image and centered content
     <div
       className="flex h-screen items-center justify-end bg-cover bg-center p-24"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: "/loginBackGround.svg" }}
     >
       {/* Form container */}
       <div className="flex flex-col items-center">

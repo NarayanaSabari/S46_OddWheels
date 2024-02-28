@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import backgroundImage from "../../src/Public/loginBackGround.svg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -132,8 +131,8 @@ export const Signup = () => {
   // Render the Signup component
   return (
     <div
-      className="flex h-screen items-center bg-cover bg-center p-24"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="flex h-screen items-center justify-end bg-cover bg-center p-24"
+      style={{ backgroundImage: "/loginBackGround.svg" }}
     >
       <div className="mx-auto mt-8 max-w-md rounded-xl bg-white p-12">
         <h2 className="mb-4 text-center text-2xl font-bold text-violet-700">

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Cookies from "js-cookie";
 import axios from "axios";
-import backgroundImage from "../Public/HomeBG.svg";
 import { Profile } from "./cards/Profile";
 import { NewPost } from "./cards/NewPost";
 import { Post } from "./cards/Post";
@@ -76,8 +75,8 @@ export const Home = () => {
     <>
       <div className="flex justify-center">
         <div
-          className="h-screen w-full max-w-screen-2xl bg-cover bg-center p-4"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+          className="flex h-screen items-center justify-end bg-cover bg-center p-24"
+          style={{ backgroundImage: "/loginBackGround.svg" }}
         >
           {postPop && <NewPost close={handleAddPostCloseClick} />}
           <div className="flex h-7/100 w-full items-center justify-between rounded-lg bg-white bg-opacity-60 p-4">

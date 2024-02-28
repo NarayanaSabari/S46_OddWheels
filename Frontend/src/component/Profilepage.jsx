@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import backgroundImage from "../Public/HomeBG.svg";
 import { Buffer } from "buffer";
 import { Post } from "./cards/Post";
 
@@ -41,8 +40,8 @@ export const Profilepage = () => {
   return (
     <div className="flex justify-center">
       <div
-        className="h-screen w-full max-w-screen-2xl overflow-scroll bg-cover bg-center p-4"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        className="flex h-screen items-center justify-end bg-cover bg-center p-24"
+        style={{ backgroundImage: "/loginBackGround.svg" }}
       >
         <div className="h-40/100 w-full bg-white bg-opacity-60 p-4">
           {data && Object.keys(data).length > 0 && (
