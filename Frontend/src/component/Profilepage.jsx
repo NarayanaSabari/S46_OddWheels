@@ -40,8 +40,8 @@ export const Profilepage = () => {
   return (
     <div className="flex justify-center">
       <div
-        className="flex h-screen items-center justify-end bg-cover bg-center p-24"
-        style={{ backgroundImage: "/loginBackGround.svg" }}
+        className="h-screen w-full max-w-screen-2xl overflow-scroll bg-cover bg-center p-4"
+        style={{ backgroundImage: `url('/HomeBG.svg')` }}
       >
         <div className="h-40/100 w-full bg-white bg-opacity-60 p-4">
           {data && Object.keys(data).length > 0 && (
